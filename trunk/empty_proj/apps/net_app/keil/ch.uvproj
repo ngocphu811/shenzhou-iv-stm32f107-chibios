@@ -856,6 +856,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\os\hal\src\sdc.c</FilePath>
             </File>
+            <File>
+              <FileName>tm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\os\hal\src\tm.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -925,6 +930,16 @@
               <FileName>stm32_dma.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\os\hal\platforms\STM32F1xx\stm32_dma.h</FilePath>
+            </File>
+            <File>
+              <FileName>mac_lld.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\os\hal\platforms\STM32\mac_lld.c</FilePath>
+            </File>
+            <File>
+              <FileName>mac_lld.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\os\hal\platforms\STM32\mac_lld.h</FilePath>
             </File>
           </Files>
         </Group>
