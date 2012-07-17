@@ -82,7 +82,7 @@
  * Everything input except:
  */
 #define VAL_GPIOACRL            0x44444444      /*  PA7...PA0 */
-#define VAL_GPIOACRH            0x44444444      /* PA15...PA8 */
+#define VAL_GPIOACRH            0x444444B4      /* PA15...PA8 */
 #define VAL_GPIOAODR            0xFFFFFFFF
 
 /*
@@ -109,7 +109,7 @@
  PD04 Led3
  PD07 Led4
  */
-#define VAL_GPIODCRL            0x34433344      /*  PD7...PD0 */
+#define VAL_GPIODCRL            0x34B33344      /*  PD7...PD0 */
 #define VAL_GPIODCRH            0x44444444      /* PD15...PD8 */
 #define VAL_GPIODODR            0xFFFFFFFF
 

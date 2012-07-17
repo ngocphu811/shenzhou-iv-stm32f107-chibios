@@ -125,7 +125,8 @@ int main(void) {
   /*
    * Activates the serial driver 3 using the driver default configuration.
    */
-  //sdStart(&SD1, NULL);
+  sdStart(&SD1, NULL);
+  sdStart(&SD2, NULL);
 
   /*
    * Creates the blinker thread.
