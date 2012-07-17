@@ -28,7 +28,8 @@
 /*
  * Board identifier.
  */
-#define BOARD_ST_STM3210C_EVAL
+//#define BOARD_ST_STM3210C_EVAL
+#define BOARD_SHENZHOU_IV_STM32F107VCT6
 #define BOARD_NAME              "ShenZhou IV STM32F107 v1.1 Deveploment Board"
 
 /*
@@ -47,6 +48,12 @@
  * MCU type, supported types are defined in ./os/hal/platforms/hal_lld.h.
  */
 #define STM32F10X_CL
+
+/*
+ * Ethernet PHY type.
+ */
+#define BOARD_PHY_ID            MII_DM9161_ID
+#define BOARD_PHY_RMII
 
 /*
  * IO pins assignments.

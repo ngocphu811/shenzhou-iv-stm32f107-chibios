@@ -28,7 +28,7 @@
 /*
  * Board identifier.
  */
-#define BOARD_ST_STM3210C_EVAL
+#define BOARD_SHENZHOU_IV_STM32F107VCT6
 #define BOARD_NAME              "ShenZhou IV STM32F107 v1.1 Deveploment Board"
 
 /*
