@@ -25,15 +25,84 @@
 /*
  * Green LED blinker thread, times are in milliseconds.
  */
+
+void led1_on()
+{
+   palClearPad(GPIOD, GPIOD_LED1_STATUS);
+}
+
+void led1_off()
+{
+   palSetPad(GPIOD, GPIOD_LED1_STATUS);
+}
+
+void led2_on()
+{
+   palClearPad(GPIOD, GPIOD_LED2_STATUS);
+}
+
+void led2_off()
+{
+   palSetPad(GPIOD, GPIOD_LED2_STATUS);
+}
+
+void led3_on()
+{
+   palClearPad(GPIOD, GPIOD_LED3_STATUS);
+}
+
+void led3_off()
+{
+   palSetPad(GPIOD, GPIOD_LED3_STATUS);
+}
+
+void led4_on()
+{
+   palClearPad(GPIOD, GPIOD_LED4_STATUS);
+}
+
+void led4_off()
+{
+   palSetPad(GPIOD, GPIOD_LED4_STATUS);
+}
+
+void led_all_on()
+{
+   led1_on();
+   led2_on();
+   led3_on();
+   led4_on();
+}
+
+void led_all_off()
+{
+   led1_off();
+   led2_off();
+   led3_off();
+   led4_off();
+}
+
 static WORKING_AREA(waThread1, 128);
 static msg_t Thread1(void *arg) {
 
   (void)arg;
   chRegSetThreadName("blinker");
   while (TRUE) {
-    //palClearPad(GPIOC, GPIOC_LED_STATUS1);
+    led1_on();
     chThdSleepMilliseconds(500);
-    //palSetPad(GPIOC, GPIOC_LED_STATUS1);
+    led1_off();
+    chThdSleepMilliseconds(500);
+    led2_on();
+    chThdSleepMilliseconds(500);
+    led2_off();
+    chThdSleepMilliseconds(500);
+    led3_on();
+    chThdSleepMilliseconds(500);
+    led3_off();
+    chThdSleepMilliseconds(500);
+    led4_on();
+    chThdSleepMilliseconds(500);
+    led4_off();
     chThdSleepMilliseconds(500);
   }
 }
@@ -56,7 +125,7 @@ int main(void) {
   /*
    * Activates the serial driver 3 using the driver default configuration.
    */
-  sdStart(&SD3, NULL);
+  //sdStart(&SD1, NULL);
 
   /*
    * Creates the blinker thread.
@@ -69,7 +138,7 @@ int main(void) {
    */
   while (TRUE) {
     //if (palReadPad(GPIOC, GPIOC_SWITCH_TAMPER) == 0)
-      TestThread(&SD3);
+    //  TestThread(&SD1);
     chThdSleepMilliseconds(500);
   }
 }

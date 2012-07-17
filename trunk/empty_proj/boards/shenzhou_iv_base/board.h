@@ -37,6 +37,12 @@
 #define STM32_LSECLK            32768
 #define STM32_HSECLK            25000000
 
+#define GPIOD_LED1_STATUS		2
+#define GPIOD_LED2_STATUS		3
+#define GPIOD_LED3_STATUS		4
+#define GPIOD_LED4_STATUS		7
+
+
 /*
  * MCU type, supported types are defined in ./os/hal/platforms/hal_lld.h.
  */
@@ -98,9 +104,12 @@
 /*
  * Port D setup.
  * Everything input except:
-
+ PD02 Led1
+ PD03 Led2
+ PD04 Led3
+ PD07 Led4
  */
-#define VAL_GPIODCRL            0x44444444      /*  PD7...PD0 */
+#define VAL_GPIODCRL            0x34433344      /*  PD7...PD0 */
 #define VAL_GPIODCRH            0x44444444      /* PD15...PD8 */
 #define VAL_GPIODODR            0xFFFFFFFF
 
