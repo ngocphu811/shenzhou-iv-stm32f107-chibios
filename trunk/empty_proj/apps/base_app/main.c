@@ -21,91 +21,14 @@
 #include "ch.h"
 #include "hal.h"
 #include "test.h"
+#include "board_led.h"
 
 /*
  * Green LED blinker thread, times are in milliseconds.
  */
 
-void led1_on()
-{
-   palClearPad(GPIOD, GPIOD_LED1_STATUS);
-}
-
-void led1_off()
-{
-   palSetPad(GPIOD, GPIOD_LED1_STATUS);
-}
-
-void led2_on()
-{
-   palClearPad(GPIOD, GPIOD_LED2_STATUS);
-}
-
-void led2_off()
-{
-   palSetPad(GPIOD, GPIOD_LED2_STATUS);
-}
-
-void led3_on()
-{
-   palClearPad(GPIOD, GPIOD_LED3_STATUS);
-}
-
-void led3_off()
-{
-   palSetPad(GPIOD, GPIOD_LED3_STATUS);
-}
-
-void led4_on()
-{
-   palClearPad(GPIOD, GPIOD_LED4_STATUS);
-}
-
-void led4_off()
-{
-   palSetPad(GPIOD, GPIOD_LED4_STATUS);
-}
-
-void led_all_on()
-{
-   led1_on();
-   led2_on();
-   led3_on();
-   led4_on();
-}
-
-void led_all_off()
-{
-   led1_off();
-   led2_off();
-   led3_off();
-   led4_off();
-}
-
 static WORKING_AREA(waThread1, 128);
-static msg_t Thread1(void *arg) {
 
-  (void)arg;
-  chRegSetThreadName("blinker");
-  while (TRUE) {
-    led1_on();
-    chThdSleepMilliseconds(500);
-    led1_off();
-    chThdSleepMilliseconds(500);
-    led2_on();
-    chThdSleepMilliseconds(500);
-    led2_off();
-    chThdSleepMilliseconds(500);
-    led3_on();
-    chThdSleepMilliseconds(500);
-    led3_off();
-    chThdSleepMilliseconds(500);
-    led4_on();
-    chThdSleepMilliseconds(500);
-    led4_off();
-    chThdSleepMilliseconds(500);
-  }
-}
 
 /*
  * Application entry point.
@@ -131,7 +54,7 @@ int main(void) {
   /*
    * Creates the blinker thread.
    */
-  chThdCreateStatic(waThread1, sizeof(waThread1), NORMALPRIO, Thread1, NULL);
+  chThdCreateStatic(waThread1, sizeof(waThread1), NORMALPRIO, thread_led_test, NULL);
 
   /*
    * Normal main() thread activity, in this demo it does nothing except
