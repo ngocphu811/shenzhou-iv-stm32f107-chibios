@@ -1091,6 +1091,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\os\various\lwip_bindings\arch\sys_arch.h</FilePath>
             </File>
+            <File>
+              <FileName>evtimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\os\various\evtimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>evtimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\os\various\evtimer.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1300,6 +1310,16 @@
               <FileName>lwipopts.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\lwipopts.h</FilePath>
+            </File>
+            <File>
+              <FileName>web.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\web\web.c</FilePath>
+            </File>
+            <File>
+              <FileName>web.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\web\web.h</FilePath>
             </File>
           </Files>
         </Group>
