@@ -87,34 +87,45 @@
 /*
  * Port A setup.
  * Everything input except:
+ * PA1  - Normal input      (ETH_RMII_REF_CLK).
+ * PA2  - Alternate output  (ETH_RMII_MDIO).
  */
-#define VAL_GPIOACRL            0x44444444      /*  PA7...PA0 */
+#define VAL_GPIOACRL            0x44444B44      /*  PA7...PA0 */
 #define VAL_GPIOACRH            0x444444B4      /* PA15...PA8 */
 #define VAL_GPIOAODR            0xFFFFFFFF
 
 /*
  * Port B setup.
  * Everything input except:
+ * PB11 - Alternate output  (ETH_RMII_TX_EN).
+ * PB12 - Alternate output  (ETH_RMII_TXD0).
+ * PB13 - Alternate output  (ETH_RMII_TXD1).
  */
 #define VAL_GPIOBCRL            0x44444444      /*  PB7...PB0 */
-#define VAL_GPIOBCRH            0x44444444      /* PB15...PB8 */
+#define VAL_GPIOBCRH            0x44BBB444      /* PB15...PB8 */
 #define VAL_GPIOBODR            0xFFFFFFFF
 
 /*
  * Port C setup.
  * Everything input except:
+ * PC1  - Alternate output  (ETH_MDC).
+ * PC5  - Normal input      (ETH_RMII_MDINT).
+
  */
-#define VAL_GPIOCCRL            0x44444444      /*  PC7...PC0 */
+#define VAL_GPIOCCRL            0x444444B4      /*  PC7...PC0 */
 #define VAL_GPIOCCRH            0x44444444      /* PC15...PC8 */
 #define VAL_GPIOCODR            0xFFFFFFFF
 
 /*
  * Port D setup.
  * Everything input except:
- PD02 Led1
- PD03 Led2
- PD04 Led3
- PD07 Led4
+ * PD02 Led1
+ * PD03 Led2
+ * PD04 Led3
+ * PD07 Led4
+ * PD08  - Normal input      (ETH_RMII_CRSDV).
+ * PD09  - Normal input      (ETH_RMII_RXD0).
+ * PD10  - Normal input      (ETH_RMII_RXD1).
  */
 #define VAL_GPIODCRL            0x34B33344      /*  PD7...PD0 */
 #define VAL_GPIODCRH            0x44444444      /* PD15...PD8 */

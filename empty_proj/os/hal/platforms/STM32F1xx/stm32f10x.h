@@ -105,8 +105,10 @@
    be based on direct access to peripherals registers 
    */
   /*#define USE_STDPERIPH_DRIVER*/
+  //#define USE_STDPERIPH_DRIVER				
 #endif
 
+#define assert_param(expr) ((void)0)
 /**
  * @brief In the following line adjust the value of External High Speed oscillator (HSE)
    used in your application 

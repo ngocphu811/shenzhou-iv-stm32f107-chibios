@@ -60,6 +60,7 @@
 #define STM32_PVD_ENABLE                    FALSE
 #define STM32_PLS                           STM32_PLS_LEV0
 
+
 /*
  * ADC driver system settings.
  */
